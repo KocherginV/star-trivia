@@ -10,6 +10,7 @@
 		F03E9A0422B1533400BA219B /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E9A0322B1533400BA219B /* BlackBgView.swift */; };
 		F03E9A0722B1543F00BA219B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E9A0622B1543F00BA219B /* Constants.swift */; };
 		F06B780322B7DF56007ECBCE /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B780222B7DF56007ECBCE /* PersonApi.swift */; };
+		F06B780522B7E85C007ECBCE /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B780422B7E85C007ECBCE /* Person.swift */; };
 		F0BEF27322A96DAF00112500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BEF27222A96DAF00112500 /* AppDelegate.swift */; };
 		F0BEF27522A96DAF00112500 /* SelectPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0BEF27422A96DAF00112500 /* SelectPersonViewController.swift */; };
 		F0BEF27822A96DAF00112500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0BEF27622A96DAF00112500 /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 		F03E9A0322B1533400BA219B /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
 		F03E9A0622B1543F00BA219B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F06B780222B7DF56007ECBCE /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
+		F06B780422B7E85C007ECBCE /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		F0BEF26F22A96DAF00112500 /* StarTrivia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarTrivia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0BEF27222A96DAF00112500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0BEF27422A96DAF00112500 /* SelectPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPersonViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 		F0BEF29722AAB75600112500 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				F06B780422B7E85C007ECBCE /* Person.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F06B780522B7E85C007ECBCE /* Person.swift in Sources */,
 				F0BEF27522A96DAF00112500 /* SelectPersonViewController.swift in Sources */,
 				F0BEF27322A96DAF00112500 /* AppDelegate.swift in Sources */,
 				F03E9A0422B1533400BA219B /* BlackBgView.swift in Sources */,
