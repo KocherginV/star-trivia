@@ -9,7 +9,7 @@
 import UIKit
 
 class SelectPersonViewController: UIViewController {
-
+    
     @IBOutlet weak var nameLbl: UILabel!
     @IBOutlet weak var heightLbl: UILabel!
     @IBOutlet weak var massLbl: UILabel!
@@ -21,13 +21,22 @@ class SelectPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personApi.getRandomPersonSession { (person) in
+        
+    }
+    
+    @IBAction func randomClicked(_ sender: Any) {
+        let random = Int.random(in: 1 ... 87)
+        personApi.getRandomPersonSession(id: random) { (person) in
             if let person = person {
-                print(person.name)
+                self.nameLbl.text = person.name
+                self.heightLbl.text = person.height
+                self.massLbl.text = person.mass
+                self.hairLbl.text = person.hair
+                self.birthYearLbl.text = person.birthYear
+                self.genderLbl.text = person.gender
             }
         }
     }
-
-
+    
 }
 
