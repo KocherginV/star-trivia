@@ -10,7 +10,7 @@ import Foundation
 
 class PersonApi {
     
-    func getRandomPersonSession() {
+    func getRandomPersonSession(completion: @escaping PersonResponseCompletion) {
         
         guard let url = URL(string: PERSON_URL) else { return }
         
@@ -18,6 +18,7 @@ class PersonApi {
             
             guard error == nil else {
                 debugPrint()
+                completion(nil)
                 return
             }
             
@@ -26,7 +27,8 @@ class PersonApi {
             do {
                 let jsonAny = try JSONSerialization.jsonObject(with: data, options: [])
                 guard let json = jsonAny as? [String: Any] else { return }
-                self.parsePersonManual(json: json)
+                let person = self.parsePersonManual(json: json)
+                completion(person)
             } catch {
                 debugPrint(error.localizedDescription)
                 return

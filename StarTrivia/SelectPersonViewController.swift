@@ -21,7 +21,11 @@ class SelectPersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        personApi.getRandomPersonSession()
+        personApi.getRandomPersonSession { (person) in
+            if let person = person {
+                print(person.name)
+            }
+        }
     }
 
 
