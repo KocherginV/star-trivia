@@ -7,8 +7,32 @@
 //
 
 import Foundation
+import Alamofire
 
 class PersonApi {
+    
+    //Web request with Alamofire:
+    
+    func getRandomPersonAlamo(id: Int, completion: @escaping PersonResponseCompletion) {
+        
+        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+        Alamofire.request(url).responseJSON { (response) in
+            if let error = response.result.error {
+                debugPrint(error.localizedDescription)
+                completion(nil)
+                return
+            }
+            
+            guard let json = response.result.value as? [String: Any] else {
+                return completion(nil)
+            }
+            let person = self.parsePersonManual(json: json)
+            completion(person)
+        }
+        
+    }
+    
+    //Web request with URL Session:
     
     func getRandomPersonSession(id: Int, completion: @escaping PersonResponseCompletion) {
         
