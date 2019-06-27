@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		87BC1C97149590C08A1F5941 /* Pods_StarTrivia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AAD92C3A9F470F53F3D4F7A /* Pods_StarTrivia.framework */; };
 		F0070CF622C5037F00644833 /* FadeEnabledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0070CF522C5037F00644833 /* FadeEnabledButton.swift */; };
+		F0070CF822C50AAE00644833 /* HomeWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0070CF722C50AAE00644833 /* HomeWorldViewController.swift */; };
+		F0070CFA22C50AD300644833 /* VehiclesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0070CF922C50AD300644833 /* VehiclesViewController.swift */; };
+		F0070CFC22C50AF400644833 /* StarshipsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0070CFB22C50AF400644833 /* StarshipsViewController.swift */; };
+		F0070CFE22C50B0000644833 /* FilmsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0070CFD22C50B0000644833 /* FilmsViewController.swift */; };
 		F03E9A0422B1533400BA219B /* BlackBgView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E9A0322B1533400BA219B /* BlackBgView.swift */; };
 		F03E9A0722B1543F00BA219B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F03E9A0622B1543F00BA219B /* Constants.swift */; };
 		F06B780322B7DF56007ECBCE /* PersonApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F06B780222B7DF56007ECBCE /* PersonApi.swift */; };
@@ -28,6 +32,10 @@
 		1AAD92C3A9F470F53F3D4F7A /* Pods_StarTrivia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StarTrivia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC4FA5142BCEDB81F6B50C2C /* Pods-StarTrivia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StarTrivia.release.xcconfig"; path = "Target Support Files/Pods-StarTrivia/Pods-StarTrivia.release.xcconfig"; sourceTree = "<group>"; };
 		F0070CF522C5037F00644833 /* FadeEnabledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FadeEnabledButton.swift; sourceTree = "<group>"; };
+		F0070CF722C50AAE00644833 /* HomeWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWorldViewController.swift; sourceTree = "<group>"; };
+		F0070CF922C50AD300644833 /* VehiclesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehiclesViewController.swift; sourceTree = "<group>"; };
+		F0070CFB22C50AF400644833 /* StarshipsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarshipsViewController.swift; sourceTree = "<group>"; };
+		F0070CFD22C50B0000644833 /* FilmsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmsViewController.swift; sourceTree = "<group>"; };
 		F03E9A0322B1533400BA219B /* BlackBgView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlackBgView.swift; sourceTree = "<group>"; };
 		F03E9A0622B1543F00BA219B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F06B780222B7DF56007ECBCE /* PersonApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonApi.swift; sourceTree = "<group>"; };
@@ -114,7 +122,6 @@
 				F0BEF29822AAB75D00112500 /* View */,
 				F0BEF29922AAB76400112500 /* Controller */,
 				F0BEF27222A96DAF00112500 /* AppDelegate.swift */,
-				F0BEF27422A96DAF00112500 /* SelectPersonViewController.swift */,
 				F06B780122B7DF2D007ECBCE /* Services */,
 				F03E9A0522B1541200BA219B /* Utils */,
 				F0BEF29622AAB72900112500 /* Resources */,
@@ -164,6 +171,11 @@
 		F0BEF29922AAB76400112500 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F0BEF27422A96DAF00112500 /* SelectPersonViewController.swift */,
+				F0070CF722C50AAE00644833 /* HomeWorldViewController.swift */,
+				F0070CF922C50AD300644833 /* VehiclesViewController.swift */,
+				F0070CFB22C50AF400644833 /* StarshipsViewController.swift */,
+				F0070CFD22C50B0000644833 /* FilmsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -286,12 +298,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F0070CFA22C50AD300644833 /* VehiclesViewController.swift in Sources */,
+				F0070CF822C50AAE00644833 /* HomeWorldViewController.swift in Sources */,
 				F06B780522B7E85C007ECBCE /* Person.swift in Sources */,
+				F0070CFE22C50B0000644833 /* FilmsViewController.swift in Sources */,
 				F0070CF622C5037F00644833 /* FadeEnabledButton.swift in Sources */,
 				F0BEF27522A96DAF00112500 /* SelectPersonViewController.swift in Sources */,
 				F0BEF27322A96DAF00112500 /* AppDelegate.swift in Sources */,
 				F03E9A0422B1533400BA219B /* BlackBgView.swift in Sources */,
 				F06B780322B7DF56007ECBCE /* PersonApi.swift in Sources */,
+				F0070CFC22C50AF400644833 /* StarshipsViewController.swift in Sources */,
 				F03E9A0722B1543F00BA219B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
