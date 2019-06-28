@@ -22,6 +22,7 @@ class SelectPersonViewController: UIViewController {
     @IBOutlet weak var filmsBtn: UIButton!
     
     var personApi = PersonApi()
+    var person: Person!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +34,7 @@ class SelectPersonViewController: UIViewController {
         personApi.getRandomPersonAlamo(id: random) { (person) in
             if let person = person {
                 self.setupView(person: person)
+                self.person = person
             }
         }
     }
@@ -51,14 +53,43 @@ class SelectPersonViewController: UIViewController {
         vehiclesBtn.isEnabled = !person.vehicleUrls.isEmpty
     }
     
-    @IBAction func homeWorldClicked(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if var destination = segue.destination as? PersonProtocol {
+            destination.person = person
+        }
+        
+//        switch segue.identifier {
+//        case Segue.homeworld.rawValue:
+//            if let destination = segue.destination as? HomeWorldViewController {
+//                destination.person = person
+//            }
+//        case Segue.vehicles.rawValue:
+//            if let destination = segue.destination as? VehiclesViewController {
+//                destination.person = person
+//            }
+//        case Segue.starships.rawValue:
+//            if let destination = segue.destination as? StarshipsViewController {
+//                destination.person = person
+//            }
+//        case Segue.films.rawValue:
+//            if let destination = segue.destination as? FilmsViewController {
+//                destination.person = person
+//            }
+//        default:
+//            break
+//        }
     }
-    @IBAction func vehiclesClicked(_ sender: Any) {
-    }
-    @IBAction func starshipsClicked(_ sender: Any) {
-    }
-    @IBAction func filmsClicked(_ sender: Any) {
-    }
+    
+//    enum Segue : String {
+//        case homeworld = "toHomeworld"
+//        case vehicles = "toVehicles"
+//        case starships = "toStarships"
+//        case films = "toFilms"
+//    }
     
 }
 
+protocol PersonProtocol {
+    var person: Person! { get set }
+}

@@ -183,9 +183,6 @@
                                 <state key="normal" title="$ Random &amp;">
                                     <color key="titleColor" red="0.97678296750000004" green="1" blue="0.9838232187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
-                                <connections>
-                                    <action selector="randomClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pw6-1a-ph0"/>
-                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKe-KP-Wsq" customClass="BlackBgView" customModule="StarTrivia" customModuleProvider="target">
                                 <rect key="frame" x="20" y="589.5" width="374" height="75"/>
@@ -201,7 +198,6 @@
                                                 </constraints>
                                                 <state key="normal" image="homeworld_icon"/>
                                                 <connections>
-                                                    <action selector="homeWorldClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yYg-AZ-EuF"/>
                                                     <segue destination="zBy-ot-Yod" kind="show" identifier="toHomeWorld" id="BzS-6M-lOB"/>
                                                 </connections>
                                             </button>
@@ -213,7 +209,6 @@
                                                 </constraints>
                                                 <state key="normal" image="vehicles"/>
                                                 <connections>
-                                                    <action selector="vehiclesClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="34D-Fs-q3D"/>
                                                     <segue destination="kxF-kc-ZDk" kind="show" identifier="toVehicles" id="4Dt-dR-pRc"/>
                                                 </connections>
                                             </button>
@@ -225,7 +220,6 @@
                                                 </constraints>
                                                 <state key="normal" image="starships"/>
                                                 <connections>
-                                                    <action selector="starshipsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TLR-L1-ai6"/>
                                                     <segue destination="mDh-Xf-xEp" kind="show" identifier="toStarships" id="P9e-jv-wAG"/>
                                                 </connections>
                                             </button>
@@ -237,7 +231,6 @@
                                                 </constraints>
                                                 <state key="normal" image="films"/>
                                                 <connections>
-                                                    <action selector="filmsClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6YG-0y-FCr"/>
                                                     <segue destination="Ivg-Zk-VoR" kind="show" identifier="toFilms" id="WAN-YL-tBr"/>
                                                 </connections>
                                             </button>
