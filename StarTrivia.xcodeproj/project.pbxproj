@@ -27,6 +27,8 @@
 		F0BEF29422AAB6FC00112500 /* Starjout.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F0BEF29122AAB6FC00112500 /* Starjout.ttf */; };
 		F0D6851822CA50DE004BFCA7 /* Homeworld.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6851722CA50DE004BFCA7 /* Homeworld.swift */; };
 		F0D6851A22CA5163004BFCA7 /* HomeworldApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6851922CA5163004BFCA7 /* HomeworldApi.swift */; };
+		F0D6851C22CB5AF7004BFCA7 /* Vehicle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6851B22CB5AF7004BFCA7 /* Vehicle.swift */; };
+		F0D6851E22CB5C6B004BFCA7 /* VehicleApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0D6851D22CB5C6B004BFCA7 /* VehicleApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		F0BEF29122AAB6FC00112500 /* Starjout.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Starjout.ttf; sourceTree = "<group>"; };
 		F0D6851722CA50DE004BFCA7 /* Homeworld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homeworld.swift; sourceTree = "<group>"; };
 		F0D6851922CA5163004BFCA7 /* HomeworldApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeworldApi.swift; sourceTree = "<group>"; };
+		F0D6851B22CB5AF7004BFCA7 /* Vehicle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vehicle.swift; sourceTree = "<group>"; };
+		F0D6851D22CB5C6B004BFCA7 /* VehicleApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VehicleApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			children = (
 				F06B780222B7DF56007ECBCE /* PersonApi.swift */,
 				F0D6851922CA5163004BFCA7 /* HomeworldApi.swift */,
+				F0D6851D22CB5C6B004BFCA7 /* VehicleApi.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				F06B780422B7E85C007ECBCE /* Person.swift */,
 				F0D6851722CA50DE004BFCA7 /* Homeworld.swift */,
+				F0D6851B22CB5AF7004BFCA7 /* Vehicle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,7 +314,9 @@
 				F0070CF822C50AAE00644833 /* HomeWorldViewController.swift in Sources */,
 				F06B780522B7E85C007ECBCE /* Person.swift in Sources */,
 				F0D6851822CA50DE004BFCA7 /* Homeworld.swift in Sources */,
+				F0D6851C22CB5AF7004BFCA7 /* Vehicle.swift in Sources */,
 				F0070CFE22C50B0000644833 /* FilmsViewController.swift in Sources */,
+				F0D6851E22CB5C6B004BFCA7 /* VehicleApi.swift in Sources */,
 				F0D6851A22CA5163004BFCA7 /* HomeworldApi.swift in Sources */,
 				F0070CF622C5037F00644833 /* FadeEnabledButton.swift in Sources */,
 				F0BEF27522A96DAF00112500 /* SelectPersonViewController.swift in Sources */,
