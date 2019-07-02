@@ -20,7 +20,7 @@ struct Vehicle : Codable {
     let passengers: String
     
     
-    enum codingKeys: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case name
         case model
         case manufacturer
