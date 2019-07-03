@@ -36,29 +36,29 @@ class PersonApi {
         }
     }
     
-//    // Web request with AF and SwiftyJson
-//
-//    func getRandomPersonAlamo(id: Int, completion: @escaping PersonResponseCompletion) {
-//
-//        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
-//        Alamofire.request(url).responseJSON { (response) in
-//            if let error = response.result.error {
-//                debugPrint(error.localizedDescription)
-//                completion(nil)
-//                return
-//            }
-//
-//            guard let data = response.data else { return completion(nil) }
-//            do {
-//                let json = try JSON(data: data)
-//                let person = self.parsePersonSwifty(json: json)
-//                completion(person)
-//            } catch {
-//                debugPrint(error.localizedDescription)
-//                completion(nil)
-//            }
-//        }
-//    }
+    //    // Web request with AF and SwiftyJson
+    //
+    //    func getRandomPersonAlamo(id: Int, completion: @escaping PersonResponseCompletion) {
+    //
+    //        guard let url = URL(string: "\(PERSON_URL)\(id)") else { return }
+    //        Alamofire.request(url).responseJSON { (response) in
+    //            if let error = response.result.error {
+    //                debugPrint(error.localizedDescription)
+    //                completion(nil)
+    //                return
+    //            }
+    //
+    //            guard let data = response.data else { return completion(nil) }
+    //            do {
+    //                let json = try JSON(data: data)
+    //                let person = self.parsePersonSwifty(json: json)
+    //                completion(person)
+    //            } catch {
+    //                debugPrint(error.localizedDescription)
+    //                completion(nil)
+    //            }
+    //        }
+    //    }
     
     //Web request with Alamofire:
     
