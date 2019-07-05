@@ -248,11 +248,16 @@
                                     <constraint firstItem="dMk-Jy-8xj" firstAttribute="centerY" secondItem="UKe-KP-Wsq" secondAttribute="centerY" id="wzf-Yo-3Tf"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="lW4-PG-HUq">
+                                <rect key="frame" x="188.5" y="742" width="37" height="37"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="oGK-AY-FTx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0LU-LI-osm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wKP-Xc-FlO" secondAttribute="trailing" constant="20" id="1UU-0F-jZK"/>
+                            <constraint firstItem="J2g-co-D9w" firstAttribute="top" secondItem="lW4-PG-HUq" secondAttribute="bottom" constant="20" id="5ap-TW-d50"/>
+                            <constraint firstItem="lW4-PG-HUq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="7Gy-d1-ifB"/>
                             <constraint firstItem="wKP-Xc-FlO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Atg-t1-Pzj"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3bx-Pg-fr3" secondAttribute="trailing" constant="20" id="DK7-mM-kWC"/>
                             <constraint firstItem="UKe-KP-Wsq" firstAttribute="width" secondItem="wKP-Xc-FlO" secondAttribute="width" id="Ga0-S1-yKx"/>
@@ -279,6 +284,7 @@
                         <outlet property="homeWorldBtn" destination="RFi-wp-OjP" id="eBU-pO-mxp"/>
                         <outlet property="massLbl" destination="Lg9-wh-AJ0" id="ApG-1U-4pt"/>
                         <outlet property="nameLbl" destination="sx7-I4-p6O" id="vkn-Nt-A99"/>
+                        <outlet property="spinner" destination="lW4-PG-HUq" id="E6a-5u-Ab1"/>
                         <outlet property="starshipsBtn" destination="Hxe-51-F50" id="5f6-Fb-WpW"/>
                         <outlet property="vehiclesBtn" destination="y3R-jc-fHA" id="Beg-e5-ObB"/>
                     </connections>
@@ -304,7 +310,7 @@
                                 <color key="textColor" red="0.97678296750000004" green="1" blue="0.9838232187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpP-V4-a8c">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpP-V4-a8c" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
                                 <rect key="frame" x="20" y="832" width="107" height="44"/>
                                 <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
                                 <state key="normal" title="Previous">
@@ -314,7 +320,7 @@
                                     <action selector="previousClicked:" destination="Ivg-Zk-VoR" eventType="touchUpInside" id="ax8-Uu-ySe"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ3-IH-VUy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZ3-IH-VUy" customClass="FadeEnabledButton" customModule="StarTrivia" customModuleProvider="target">
                                 <rect key="frame" x="339" y="832" width="55" height="44"/>
                                 <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="20"/>
                                 <state key="normal" title="Next">
@@ -327,8 +333,8 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aVh-R7-5AN">
                                 <rect key="frame" x="20" y="228" width="374" height="584"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="b1L-6E-jXk">
-                                        <rect key="frame" x="20" y="20" width="334" height="165.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="b1L-6E-jXk">
+                                        <rect key="frame" x="20" y="20" width="334" height="169.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Djb-qQ-phP">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="27.5"/>
@@ -351,7 +357,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="m65-qt-b1B">
-                                                <rect key="frame" x="0.0" y="34.5" width="334" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="35.5" width="334" height="27.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="episode: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sZ8-yN-XDD">
                                                         <rect key="frame" x="0.0" y="0.0" width="91" height="27.5"/>
@@ -371,7 +377,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Egg-ee-r32">
-                                                <rect key="frame" x="0.0" y="69" width="334" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="71" width="334" height="27.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Director: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Cs-QL-WTx">
                                                         <rect key="frame" x="0.0" y="0.0" width="107.5" height="27.5"/>
@@ -391,7 +397,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5xh-1p-PAy">
-                                                <rect key="frame" x="0.0" y="103.5" width="334" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="106.5" width="334" height="27.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Producer: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1X-rf-MQu">
                                                         <rect key="frame" x="0.0" y="0.0" width="116" height="27.5"/>
@@ -411,7 +417,7 @@
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="17d-hn-wwa">
-                                                <rect key="frame" x="0.0" y="138" width="334" height="27.5"/>
+                                                <rect key="frame" x="0.0" y="142" width="334" height="27.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Released: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PSt-AK-22p">
                                                         <rect key="frame" x="0.0" y="0.0" width="108" height="27.5"/>
@@ -433,7 +439,7 @@
                                         </subviews>
                                     </stackView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T3s-tG-nUZ">
-                                        <rect key="frame" x="20" y="205.5" width="334" height="358.5"/>
+                                        <rect key="frame" x="20" y="209.5" width="334" height="354.5"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" red="0.97678296750000004" green="1" blue="0.9838232187" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <fontDescription key="fontDescription" name="StarJedi" family="Star Jedi" pointSize="17"/>
